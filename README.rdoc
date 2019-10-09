@@ -56,6 +56,14 @@ Alternatively, if you are using ActionMailer directly (without Rails) you will n
   ActionMailer::Base.add_delivery_method :letter_opener, LetterOpener::DeliveryMethod, :location => File.expand_path('../tmp/letter_opener', __FILE__)
   ActionMailer::Base.delivery_method = :letter_opener
 
+== Windows Subsystem for Linux(wsl)
+
+  export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
+
+
+  LetterOpener.configure do |config|
+    config.windows = true
+  end 
 
 == Remote Alternatives
 
